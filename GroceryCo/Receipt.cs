@@ -5,32 +5,14 @@ using System.Linq;
 
 namespace GroceryCo
 {
-    class Receipt : CurrentPriceCatalogue
-    {
-        public static void PrintReceipt(string path)
-        {
+    class Receipt : Basket
+    {        
+        public static void PrintReceipt(string basketFilePath)
+        {           
             try
             {
-                List<string> basketLines = File.ReadAllLines(path).ToList();
-                List<CatalogueItem> receiptItem = new();
-                foreach (var basketLine in basketLines)
-                {
-                    foreach (var item in catalogueItems)
-                    {
-                        if (basketLine == item.Name)
-                        {
-                            item.Quantity +=1;
-                            if (!receiptItem.Contains(item))
-                            {
-                                receiptItem.Add(item);
-                            }
-                        }
-                    }
-                }
-                foreach (var item in receiptItem)
-                {
-                    Console.WriteLine($"{item.Quantity} \t {item.Name} \t\t ${item.Price} \t ${item.OnSalePrice}  ${item.GetEffectivePrice()}");
-                }
+                ScanBasketItems(basketFilePath);
+                BuildFormattedReceipt();
             }
             catch (Exception e)
             {
@@ -41,5 +23,22 @@ namespace GroceryCo
                 Console.Beep();
             }
         }
+        static void BuildFormattedReceipt()
+        {
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine(" Quantity \t Item Name \t\t Item Price \t\t *Promotional Price* \t Price Charged ");
+            Console.ResetColor();
+            foreach (CatalogueItem item in ReceiptItems)
+            {
+                Console.WriteLine(" {0} \t\t {1} \t\t\t ${2} \t\t\t {3} \t\t\t ${4}",item.Quantity,item.Name,item.Price,( item.IsOnSale ? "$"+item.OnSalePrice : ""),item.GetEffectivePrice());
+            }
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("");
+            Console.WriteLine($"\t\t\t\t\t Total price payable is ${Checkout.CalculateTotalPrice()} ");
+            Console.ResetColor();
+        }
+           
     }
 }

@@ -15,16 +15,11 @@ namespace GroceryCo
             this.name = name;
             this.price = Convert.ToDecimal(price);
         }
-
         public decimal OnSalePrice { get => onSalePrice; set => onSalePrice = value; }
-
         public string Name => name;
-
         public decimal Price => price;
-
         public bool IsOnSale { get => isOnSale; set => isOnSale = value; }
-        public int Quantity { get => quantity; set => quantity = value; }
-   
+        public int Quantity { get => quantity; set => quantity = value; }  
         public decimal GetEffectivePrice()
         {
             return IsOnSale ? OnSalePrice : Price;

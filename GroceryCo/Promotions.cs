@@ -11,11 +11,11 @@ namespace GroceryCo
         {
             try
             {
-                List<string> promotionLines = File.ReadAllLines(path).ToList();
-                foreach (var promotionLine in promotionLines)
+                List<string> lines = File.ReadAllLines(path).ToList();
+                foreach (string line in lines)
                 {
-                    string[] entries = promotionLine.Split(',');
-                    foreach (var item in catalogueItems)
+                    string[] entries = line.Split(',');
+                    foreach (CatalogueItem item in CatalogueItems)
                     {
                         if (entries[0] == item.Name)
                         {

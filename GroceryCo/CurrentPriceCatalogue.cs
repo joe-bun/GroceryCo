@@ -7,17 +7,20 @@ namespace GroceryCo
 {
     public class CurrentPriceCatalogue
     {
-        public static List<CatalogueItem> catalogueItems = new();
-        public static void BuildCurrentPriceCatalogue(string path)
+        private static List<CatalogueItem> catalogueItems = new();
+
+        public static List<CatalogueItem> CatalogueItems { get => catalogueItems; set => catalogueItems = value; }
+
+        public static void BuildCurrentPriceCatalogue(string catalogueFilePath)
         {
             try
             {
-                List<string> lines = File.ReadAllLines(path).ToList();
+                List<string> lines = File.ReadAllLines(catalogueFilePath).ToList();
                 foreach (var line in lines)
                 {
                     string[] entries = line.Split(',');
                     CatalogueItem newItem = new(entries[0], entries[1]);
-                    catalogueItems.Add(newItem);
+                    CatalogueItems.Add(newItem);
                 }
             }
             catch (Exception e)

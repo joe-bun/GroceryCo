@@ -1,8 +1,8 @@
 Apple,1.49
-Bananas,2
+Coke,2
 Beans,9.99
 Cake,20
-Cheese,8
+Pasta,8
 Milk,3
 Peas,4.5
 Juice,6.99
