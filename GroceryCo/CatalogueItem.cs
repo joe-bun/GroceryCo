@@ -1,34 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroceryCo
 {
-    class CatalogueItem
+    public class CatalogueItem
     {
-        public string name;
-        public decimal price;
-        public bool onSale;
-        public decimal onSalePrice;
-        public int quantity;
+        private readonly string name;
+        private readonly decimal price;
+        private bool isOnSale;
+        private decimal onSalePrice;
+        private int quantity;
 
         public CatalogueItem(string name, string price)
         {
             this.name = name;
-            this.price = Convert.ToDecimal(price);        
+            this.price = Convert.ToDecimal(price);
         }
 
-        public decimal setOnSalePrice(string promotionalPrice) => this.onSalePrice = Convert.ToDecimal(promotionalPrice);
-        public decimal getEffectivePrice()
-        {
-                return onSale ? onSalePrice : price;
-        }
-        public string getItem() => name;
-        public void addItemToReceipt(string name)
-        {
+        public decimal OnSalePrice { get => onSalePrice; set => onSalePrice = value; }
 
+        public string Name => name;
+
+        public decimal Price => price;
+
+        public bool IsOnSale { get => isOnSale; set => isOnSale = value; }
+        public int Quantity { get => quantity; set => quantity = value; }
+   
+        public decimal GetEffectivePrice()
+        {
+            return IsOnSale ? OnSalePrice : Price;
         }
     }
 }
