@@ -1,0 +1,16 @@
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\GroceryCo.exe
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\GroceryCo.deps.json
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\GroceryCo.runtimeconfig.json
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\GroceryCo.runtimeconfig.dev.json
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\GroceryCo.dll
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\ref\GroceryCo.dll
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\bin\Debug\net5.0\GroceryCo.pdb
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.csprojAssemblyReference.cache
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.AssemblyInfoInputs.cache
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.AssemblyInfo.cs
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.csproj.CoreCompileInputs.cache
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.dll
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\ref\GroceryCo.dll
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.pdb
+C:\Users\joban\source\repos\GroceryCo\GroceryCo\obj\Debug\net5.0\GroceryCo.genruntimeconfig.cache
