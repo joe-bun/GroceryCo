@@ -16,7 +16,7 @@ namespace GroceryCo
             }
             catch (Exception e)
             {
-                Console.WriteLine("Oops! something went wrong prining your receipt.\nPlease see a cashier.\n\n" + e.Message);
+                Console.WriteLine($"Oops! something went wrong printing your receipt.\nPlease see a cashier.\n\n{e.Message}");
             }
             finally
             {

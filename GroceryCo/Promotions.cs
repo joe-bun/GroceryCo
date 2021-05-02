@@ -7,11 +7,11 @@ namespace GroceryCo
 {
     public class Promotions : CurrentPriceCatalogue
     {
-        public static void ApplyPromotions(string path)
+        public static void ApplyPromotions(string promotionsFilePath)
         {
             try
             {
-                List<string> lines = File.ReadAllLines(path).ToList();
+                List<string> lines = File.ReadAllLines(promotionsFilePath).ToList();
                 foreach (string line in lines)
                 {
                     string[] entries = line.Split(',');

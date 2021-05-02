@@ -16,7 +16,7 @@ namespace GroceryCo
             try
             {
                 List<string> lines = File.ReadAllLines(catalogueFilePath).ToList();
-                foreach (var line in lines)
+                foreach (string line in lines)
                 {
                     string[] entries = line.Split(',');
                     CatalogueItem newItem = new(entries[0], entries[1]);
